@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/font-awesome.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+
+  <title>{% if title %} {{ title + ' &bull; '|safe }} {% endif %} Flask Blog</title>
+</head>
+<body>
+{% include "includes/nav.html" %}
