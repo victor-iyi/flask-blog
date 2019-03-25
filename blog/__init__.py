@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 
 from config import TEMPLATE_FOLDER, STATIC_FOLDER
@@ -14,6 +15,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 # Database handler.
 db = SQLAlchemy(app)
+
+# Login Manager.
+login_manager = LoginManager(app)
 
 # noqa: E402
 from blog import routes
