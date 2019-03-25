@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{% if title %} {{ title }} {% endif %} Flask Blog</title>
+  <title>{% if title %} {{ title + ' &bull; '|safe }} {% endif %} Flask Blog</title>
 </head>
 <body>
 {% include "layouts/nav.html" %}
